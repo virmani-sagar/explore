@@ -1,0 +1,815 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Policies & Guidelines | OTXS</title>
+  <meta name="description" content="Read OTXS privacy, website usage, travel, booking, cancellation and safety policies.">
+  <meta name="theme-color" content="#101820">
+
+  <style>
+    :root {
+      --dark: #101820;
+      --card: #172631;
+      --card-light: #1d303b;
+      --yellow: #ffd166;
+      --orange: #ff7a35;
+      --white: #f6f5f0;
+      --muted: #b8c3c8;
+      --border: rgba(255,255,255,.1);
+      --radius: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 95px;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--dark);
+      color: var(--white);
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--yellow);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--orange);
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(16,24,32,.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .navbar {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      color: var(--white);
+      font-size: 1.45rem;
+      font-weight: 850;
+      letter-spacing: 1px;
+      white-space: nowrap;
+    }
+
+    .brand span {
+      color: var(--yellow);
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    nav a {
+      color: var(--muted);
+      font-size: .92rem;
+    }
+
+    nav a:hover {
+      color: var(--yellow);
+    }
+
+    .hero {
+      padding: 76px 0 50px;
+      background:
+        radial-gradient(ellipse at 85% 15%, rgba(255,122,53,.15), transparent 38%),
+        radial-gradient(ellipse at 10% 70%, rgba(255,209,102,.09), transparent 35%);
+    }
+
+    .eyebrow {
+      display: inline-block;
+      color: var(--yellow);
+      background: rgba(255,209,102,.09);
+      border: 1px solid rgba(255,209,102,.22);
+      padding: 6px 12px;
+      border-radius: 100px;
+      font-size: .8rem;
+      font-weight: 750;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      line-height: 1.08;
+      letter-spacing: -2px;
+      max-width: 850px;
+      margin-bottom: 20px;
+    }
+
+    h1 span {
+      color: var(--yellow);
+    }
+
+    .hero p {
+      color: var(--muted);
+      max-width: 730px;
+      font-size: 1.08rem;
+    }
+
+    .updated {
+      margin-top: 22px;
+      font-size: .87rem !important;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 260px minmax(0, 1fr);
+      gap: 32px;
+      align-items: start;
+      padding-bottom: 80px;
+    }
+
+    aside {
+      position: sticky;
+      top: 95px;
+      padding: 22px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+
+    aside h2 {
+      font-size: 1rem;
+      margin-bottom: 14px;
+    }
+
+    aside a {
+      display: block;
+      padding: 8px 0;
+      color: var(--muted);
+      font-size: .9rem;
+      border-bottom: 1px solid rgba(255,255,255,.05);
+    }
+
+    aside a:last-child {
+      border-bottom: 0;
+    }
+
+    aside a:hover {
+      color: var(--yellow);
+    }
+
+    .policy-content {
+      min-width: 0;
+    }
+
+    .notice {
+      background: rgba(255,209,102,.07);
+      border: 1px solid rgba(255,209,102,.2);
+      border-radius: var(--radius);
+      padding: 20px 22px;
+      margin-bottom: 22px;
+      color: var(--muted);
+    }
+
+    .notice strong {
+      color: var(--yellow);
+    }
+
+    .policy-section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: clamp(22px, 4vw, 32px);
+      margin-bottom: 20px;
+      scroll-margin-top: 95px;
+    }
+
+    .section-number {
+      color: var(--orange);
+      font-size: .82rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      margin-bottom: 5px;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      line-height: 1.3;
+      margin-bottom: 16px;
+    }
+
+    h3 {
+      color: var(--yellow);
+      font-size: 1.03rem;
+      margin: 23px 0 8px;
+    }
+
+    p {
+      color: var(--muted);
+      margin-bottom: 13px;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    ul {
+      padding-left: 22px;
+      color: var(--muted);
+      margin: 10px 0 16px;
+    }
+
+    li {
+      padding-left: 4px;
+      margin-bottom: 7px;
+    }
+
+    .contact-card {
+      background: linear-gradient(135deg, #24343a, #172631);
+      border: 1px solid rgba(255,209,102,.22);
+      border-radius: var(--radius);
+      padding: 28px;
+      margin-top: 24px;
+    }
+
+    .contact-card h2 {
+      color: var(--yellow);
+    }
+
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 11px 17px;
+      border-radius: 10px;
+      background: var(--yellow);
+      color: var(--dark);
+      font-weight: 800;
+    }
+
+    .button:hover {
+      background: var(--orange);
+      color: var(--dark);
+    }
+
+    .button.secondary {
+      color: var(--white);
+      background: transparent;
+      border: 1px solid var(--border);
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 0;
+      color: var(--muted);
+      font-size: .88rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    @media (max-width: 800px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+
+      aside {
+        position: static;
+      }
+
+      .toc-links {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0 16px;
+      }
+
+      nav {
+        gap: 12px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .navbar {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 15px 0;
+        gap: 8px;
+      }
+
+      nav {
+        gap: 10px 15px;
+      }
+
+      .hero {
+        padding-top: 48px;
+      }
+
+      h1 {
+        letter-spacing: -1px;
+      }
+
+      .toc-links {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container navbar">
+    <a class="brand" href="https://home.otxs.de" aria-label="OTXS home">
+      OTX<span>S</span>
+    </a>
+
+    <nav aria-label="Main navigation">
+      <a href="https://home.otxs.de">Home</a>
+      <a href="https://trave.otxs.de">Travel</a>
+      <a href="https://adventure.otxs.de">Adventure</a>
+      <a href="https://stays.otxs.de">Stays</a>
+      <a href="https://ride-companion.otxs.de">Ride Companion</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container">
+      <span class="eyebrow">OTXS · Discover and Explore</span>
+      <h1>Policies & <span>Guidelines</span></h1>
+      <p>
+        Clear information about how OTXS websites and services are intended
+        to be used, how enquiries and bookings may be handled, and what
+        visitors should know before travelling with us.
+      </p>
+      <p class="updated">
+        Last updated: 26 October 2026
+      </p>
+    </div>
+  </section>
+
+  <div class="container layout">
+    <aside>
+      <h2>On this page</h2>
+      <div class="toc-links">
+        <a href="#overview">1. Overview</a>
+        <a href="#privacy">2. Privacy</a>
+        <a href="#cookies">3. Cookies & analytics</a>
+        <a href="#website">4. Website usage</a>
+        <a href="#bookings">5. Enquiries & bookings</a>
+        <a href="#payments">6. Payments & pricing</a>
+        <a href="#cancellations">7. Cancellations</a>
+        <a href="#safety">8. Travel & safety</a>
+        <a href="#third-party">9. Third-party services</a>
+        <a href="#availability">10. Availability & accuracy</a>
+        <a href="#liability">11. Liability</a>
+        <a href="#changes">12. Policy changes</a>
+        <a href="#contact">13. Contact</a>
+      </div>
+    </aside>
+
+    <div class="policy-content">
+
+      <div class="notice">
+        <strong>Please read before using our services.</strong>
+        These guidelines are a general starting point for OTXS. Specific
+        services may have additional terms communicated before a booking
+        or transaction is confirmed. Nothing on this page should be read
+        as a substitute for applicable legal requirements.
+      </div>
+
+      <section class="policy-section" id="overview">
+        <div class="section-number">01 / INTRODUCTION</div>
+        <h2>Overview</h2>
+        <p>
+          OTXS — OTX Services | Discover and Explore — provides online
+          information and digital resources related to travel, exploration,
+          stays, adventures, ride companionship and associated tools.
+        </p>
+        <p>
+          In this policy, “OTXS”, “we”, “our” and “us” refer to the OTXS
+          service and its operator. “You” refers to a visitor, customer
+          or person using our websites or services.
+        </p>
+        <p>
+          By using our websites, you agree to use them lawfully and
+          responsibly. If you do not agree with a relevant policy, please
+          discontinue use of the affected service.
+        </p>
+      </section>
+
+      <section class="policy-section" id="privacy">
+        <div class="section-number">02 / YOUR INFORMATION</div>
+        <h2>Privacy policy</h2>
+        <p>
+          We aim to collect only the information reasonably needed to
+          respond to enquiries, coordinate requested services, improve
+          our websites and maintain service records.
+        </p>
+
+        <h3>Information you may provide</h3>
+        <ul>
+          <li>Name and contact details, such as email address or phone number.</li>
+          <li>Travel enquiries, requested dates, destinations and preferences.</li>
+          <li>Booking details or information you voluntarily include in a message.</li>
+          <li>Feedback and communications you send to OTXS.</li>
+        </ul>
+
+        <h3>How information may be used</h3>
+        <ul>
+          <li>To reply to enquiries and communicate about requested services.</li>
+          <li>To coordinate, confirm or manage a booking where applicable.</li>
+          <li>To maintain records, prevent misuse and address support requests.</li>
+          <li>To improve website functionality and understand service needs.</li>
+          <li>To comply with applicable legal obligations.</li>
+        </ul>
+
+        <h3>Sharing and retention</h3>
+        <p>
+          We do not intend to sell personal information. Where necessary
+          to fulfil a request, information may be shared with relevant
+          service providers or partners, or disclosed when legally required.
+          We aim to limit such sharing to what is reasonably necessary.
+        </p>
+        <p>
+          Information may be retained for as long as needed for the purpose
+          for which it was collected, legitimate operational requirements
+          or applicable legal obligations, and then deleted or anonymised
+          where appropriate.
+        </p>
+
+        <h3>Your choices</h3>
+        <p>
+          You may contact us to request access to, correction of or deletion
+          of personal information, subject to applicable law and legitimate
+          record-retention requirements. We may need to verify your identity
+          before acting on a request.
+        </p>
+        <p>
+          Please avoid sending passwords, payment-card details, government
+          identity documents or other sensitive information through ordinary
+          email or public forms unless a secure, appropriate process has
+          been provided.
+        </p>
+      </section>
+
+      <section class="policy-section" id="cookies">
+        <div class="section-number">03 / WEBSITE TECHNOLOGY</div>
+        <h2>Cookies & analytics</h2>
+        <p>
+          OTXS websites may use essential browser storage, cookies or
+          analytics tools to support functionality, security and performance,
+          depending on the features deployed on each website.
+        </p>
+        <p>
+          Third-party embedded content or tools may use their own cookies
+          or collect technical information under their respective policies.
+          Browser settings may allow you to restrict cookies, although some
+          website features may not work as intended.
+        </p>
+        <p>
+          This section should be updated to identify the actual analytics,
+          hosting, form, advertising and tracking tools used by OTXS.
+          Do not assume that a particular tool is active unless it has
+          been installed and configured.
+        </p>
+      </section>
+
+      <section class="policy-section" id="website">
+        <div class="section-number">04 / ACCEPTABLE USE</div>
+        <h2>Website usage</h2>
+        <p>
+          You may browse and use OTXS websites for lawful personal or
+          business purposes, subject to the conditions of each service.
+        </p>
+        <p>You must not:</p>
+        <ul>
+          <li>Use the websites for fraud, harassment or unlawful activity.</li>
+          <li>Attempt to disrupt, damage or gain unauthorised access to systems.</li>
+          <li>Submit false enquiries or impersonate another person.</li>
+          <li>Scrape, copy or republish protected material in violation of applicable rights.</li>
+          <li>Misuse booking forms, calculators, community features or other tools.</li>
+        </ul>
+        <p>
+          OTXS names, branding, original content and website materials may
+          be protected by applicable intellectual-property laws. Permission
+          may be required before reproducing or commercially reusing them.
+        </p>
+      </section>
+
+      <section class="policy-section" id="bookings">
+        <div class="section-number">05 / REQUESTING A SERVICE</div>
+        <h2>Enquiries & bookings</h2>
+        <p>
+          Sending an enquiry, filling out a form or contacting OTXS does
+          not by itself guarantee availability or create a confirmed booking.
+          A booking should be treated as confirmed only after the relevant
+          details and any applicable conditions have been explicitly agreed.
+        </p>
+        <p>
+          Depending on the service, confirmation may include the date,
+          time, pickup or meeting point, destination, number of participants,
+          price and any special requirements.
+        </p>
+        <p>
+          Customers should check the details in their confirmation and
+          promptly communicate any errors or changes. OTXS may request
+          additional information reasonably necessary to coordinate a service.
+        </p>
+        <p>
+          Where OTXS connects users with independent service providers,
+          the provider may have separate terms and responsibilities. The
+          specific arrangement should be made clear before the transaction.
+        </p>
+      </section>
+
+      <section class="policy-section" id="payments">
+        <div class="section-number">06 / PRICES & TRANSACTIONS</div>
+        <h2>Payments & pricing</h2>
+        <p>
+          Prices, deposits, payment methods and due dates may vary by service.
+          Any applicable charges should be communicated before a booking or
+          paid service is confirmed.
+        </p>
+        <ul>
+          <li>Confirm the total price and what is included before paying.</li>
+          <li>Check whether taxes, entry fees, meals, fuel or other expenses are included.</li>
+          <li>Use only payment methods communicated through an authorised OTXS channel.</li>
+          <li>Keep payment confirmations and receipts for your records.</li>
+        </ul>
+        <p>
+          Do not assume that an online enquiry, estimate, displayed price
+          or informal discussion is a final quote. Any price change should
+          be communicated and agreed upon before proceeding.
+        </p>
+        <p>
+          OTXS will not ask you to disclose your banking password, card PIN
+          or one-time password to process an ordinary payment.
+        </p>
+      </section>
+
+      <section class="policy-section" id="cancellations">
+        <div class="section-number">07 / CHANGES & REFUNDS</div>
+        <h2>Cancellations, rescheduling & refunds</h2>
+        <p>
+          Cancellation and refund conditions depend on the service and
+          the costs or commitments involved. Where a specific policy applies,
+          it should be communicated before payment or booking confirmation.
+        </p>
+
+        <h3>Customer cancellations</h3>
+        <p>
+          If you need to cancel or reschedule, contact OTXS as early as
+          possible. Any refund, deduction or rescheduling fee will depend
+          on the terms disclosed for that booking and applicable law.
+        </p>
+
+        <h3>Provider cancellations or changes</h3>
+        <p>
+          If OTXS or a relevant service provider cannot deliver a confirmed
+          service, we will communicate the available next steps. Depending
+          on the circumstances and agreed terms, these may include
+          rescheduling, an alternative arrangement or a refund of eligible
+          amounts paid.
+        </p>
+
+        <h3>Refund processing</h3>
+        <p>
+          Where a refund is approved, the processing time may depend on
+          the payment method and financial service provider. Any applicable
+          refund timeline should be communicated to the customer.
+        </p>
+        <p>
+          This general section does not establish a universal non-refundable
+          deposit or fixed cancellation deadline. Service-specific conditions
+          should be documented before accepting payment.
+        </p>
+      </section>
+
+      <section class="policy-section" id="safety">
+        <div class="section-number">08 / RESPONSIBLE EXPLORATION</div>
+        <h2>Travel, adventure & ride safety</h2>
+        <p>
+          Travel and outdoor activities may involve road, weather, terrain,
+          health and other risks. Visitors and participants should make
+          informed decisions and follow applicable laws and local guidance.
+        </p>
+        <ul>
+          <li>Follow traffic rules, local restrictions and instructions from authorised personnel.</li>
+          <li>Use appropriate safety equipment and protective clothing.</li>
+          <li>Check weather, road conditions, route suitability and vehicle readiness before departure.</li>
+          <li>Share accurate information about your requirements and relevant travel constraints.</li>
+          <li>Do not participate in an activity if you believe conditions are unsafe.</li>
+          <li>Respect local communities, private property, wildlife and the natural environment.</li>
+        </ul>
+
+        <h3>Motorcycle rides</h3>
+        <p>
+          If a service involves travelling by motorcycle, participants must
+          be comfortable with the arrangement and use legally required
+          protective equipment. The rider and passenger must comply with
+          applicable road-safety laws. Motorcycle travel may be less
+          protective than travel in an enclosed vehicle.
+        </p>
+        <p>
+          A destination guide, route suggestion or estimated travel time
+          is informational and does not guarantee road conditions, safety
+          or arrival time. Conditions can change without notice.
+        </p>
+
+        <h3>Personal responsibility</h3>
+        <p>
+          Participants should assess their own comfort, fitness, equipment
+          and ability to take part. Contact emergency services directly
+          if there is an immediate threat to life or safety; do not rely
+          solely on an online message or website response.
+        </p>
+      </section>
+
+      <section class="policy-section" id="third-party">
+        <div class="section-number">09 / EXTERNAL SERVICES</div>
+        <h2>Third-party websites & providers</h2>
+        <p>
+          OTXS may link to external websites, maps, accommodation providers,
+          booking platforms, payment services or other third-party resources.
+          These services may operate independently and have their own
+          privacy policies, terms, prices and cancellation conditions.
+        </p>
+        <p>
+          An external link is provided for convenience and does not
+          automatically mean that OTXS owns, operates or endorses the
+          external service. Review the relevant provider's terms before
+          sharing information or making a payment.
+        </p>
+        <p>
+          Responsibility for third-party services depends on the actual
+          arrangement and applicable law. The existence of a link alone
+          does not determine responsibility.
+        </p>
+      </section>
+
+      <section class="policy-section" id="availability">
+        <div class="section-number">10 / INFORMATION QUALITY</div>
+        <h2>Information accuracy & availability</h2>
+        <p>
+          We aim to keep our website information useful and up to date,
+          but destinations, opening hours, prices, accommodation availability,
+          routes, weather and local rules may change.
+        </p>
+        <p>
+          Information, calculators, checklists and planning tools are
+          provided for general assistance unless a service explicitly
+          states otherwise. Results and estimates should be independently
+          checked before important decisions are made.
+        </p>
+        <p>
+          Websites and features may occasionally be unavailable due to
+          maintenance, technical issues or circumstances outside our control.
+          We may update or discontinue features where reasonably necessary.
+        </p>
+      </section>
+
+      <section class="policy-section" id="liability">
+        <div class="section-number">11 / RESPONSIBILITY</div>
+        <h2>Disclaimers & liability</h2>
+        <p>
+          To the extent permitted by applicable law, general website
+          information and planning tools are provided without a guarantee
+          that they will be complete, uninterrupted or suitable for every
+          individual purpose.
+        </p>
+        <p>
+          Nothing in this policy excludes or limits any consumer right,
+          statutory protection or liability that cannot lawfully be
+          excluded or limited. Any service-specific allocation of
+          responsibility must be consistent with applicable law and the
+          actual arrangement.
+        </p>
+        <p>
+          Users remain responsible for verifying information relevant to
+          their own circumstances and for complying with applicable laws
+          and safety requirements.
+        </p>
+      </section>
+
+      <section class="policy-section" id="changes">
+        <div class="section-number">12 / UPDATES</div>
+        <h2>Changes to these policies</h2>
+        <p>
+          We may revise these policies as OTXS services, technology or
+          legal requirements change. The latest version will be published
+          on this page with an updated revision date.
+        </p>
+        <p>
+          If a change materially affects an existing booking or arrangement,
+          relevant customers should be informed where required by the
+          applicable terms or law.
+        </p>
+      </section>
+
+      <section class="policy-section" id="contact">
+        <div class="section-number">13 / GET IN TOUCH</div>
+        <h2>Questions, privacy requests & complaints</h2>
+        <p>
+          For questions about these policies, privacy-related requests,
+          corrections or concerns about an OTXS service, contact us using
+          the details below.
+        </p>
+
+        <div class="contact-card">
+          <h2>Contact OTXS</h2>
+          <p>
+            OTXS — OTX Services | Discover and Explore
+          </p>
+          <p>
+            Email:
+            <a href="mailto:otxs.de@gmail.com">otxs.de@gmail.com</a>
+          </p>
+          <p>
+            Website:
+            <a href="https://home.otxs.de">home.otxs.de</a>
+          </p>
+
+          <div class="contact-links">
+            <a class="button" href="mailto:otxs.de@gmail.com?subject=OTXS%20Policy%20Enquiry">
+              Email us
+            </a>
+            <a class="button secondary" href="https://home.otxs.de">
+              Visit OTXS
+            </a>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <div>
+      <strong>OTX<span style="color:var(--yellow)">S</span></strong>
+      <span> · Discover and Explore</span>
+      <p style="margin-top:5px">Explore responsibly. Travel thoughtfully.</p>
+    </div>
+
+    <div class="footer-links">
+      <a href="https://home.otxs.de">Home</a>
+      <a href="https://trave.otxs.de">Travel</a>
+      <a href="https://adventure.otxs.de">Adventure</a>
+      <a href="#privacy">Privacy</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <div>© <span id="year"></span> OTXS. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
+
